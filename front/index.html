@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="/src/app.ts"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header-title">ToDoList</h1>
+      </header>
+      <main class="main">
+        <div class="action-div">
+          <button class="add-todo">Ajouter une tâche</button>
+          <div class="action-filter-div">
+            <button class="action-filter-all active">tout</button>
+            <button class="action-filter-done">fait</button>
+            <button class="action-filter-todo">à faire</button>
+          </div>
+        </div>
+        <ul class="html-list">
+        </ul>
+      </main>
+    </div>
+    <aside>
+        <dialog class="todo-dialog" close>
+          <form class="todo-form" method="dialog">
+            <div class="todo-form-info">
+            <label class="todo-form-label" for="title">Titre de la tâche</label>
+            <input class="todo-form-input" name="title" type="text" required>
+            </div>
+            <div class="todo-form-btn">
+            <button class="todo-form-submit" type="submit">Soumettre</button>
+            <button class="todo-form-close">Annuler</button>
+            </div>
+          </form>
+        </dialog>
+      </aside>
+  </body>
+</html>

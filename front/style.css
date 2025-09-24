@@ -1,0 +1,177 @@
+:root {
+    --color-police: #FFFFFF;
+    --color-police-active: #000000;
+    --color-bg: #0c0c0c;
+    --color-bg-btn: rgba(255, 255, 255, 0.3);
+    --color-bg-btn-active: #a8a6a6;
+    --color-bg-dialog: #696767;
+    --color-delete: rgb(167, 4, 4); 
+}
+
+html, body {
+    font-size: 16px;
+    padding: 8px;
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--color-police);
+    background-color: var(--color-bg);
+}
+
+.modal {
+    opacity: 0.3;
+}
+
+.container,
+.action-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    margin-block: 30px;
+    font-size: 2.5rem;
+}
+
+.add-todo,
+.action-filter-all,
+.action-filter-done,
+.action-filter-todo,
+.todo-form-submit,
+.todo-form-close,
+.todo-done,
+.todo-delete {
+    width: max-content;
+    padding-inline: 2rem;
+    margin-bottom: 30px;
+    height: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--color-bg-btn);
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: var(--color-bg-btn-active);
+        color: var(--color-police-active);
+    }
+}
+
+.active {
+    background-color: var(--color-bg-btn-active);
+    color: var(--color-police-active); 
+}
+
+.todo-dialog {
+    margin: 16px;
+    padding: 0;
+    height: 60vh;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--color-bg-dialog);
+}
+
+.todo-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.todo-form-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.todo-form-label {
+    margin-top: 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-police-active);
+}
+
+.todo-form-input {
+    width: calc(100% - 32px);
+    height: 2rem;
+    border-radius: 0.5rem;
+    padding-left: 8px;
+    font-size: 1rem;
+    background-color: var(--color-police);
+}
+
+.todo-form-btn {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.todo-form-submit,
+.todo-form-close {
+    background-color: var(--color-police-active);
+    color: var(--color-police);
+
+    &:hover {
+        background-color: var(--color-police);
+        color: var(--color-police-active);
+    }
+}
+
+.html-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    border: solid 1px var(--color-police);
+    border-radius: 0.5rem;
+    padding: 8px;
+    max-width: 450px;
+}
+
+
+.list-item-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.todo-done,
+.todo-delete {
+    width: 100px;
+    padding-inline: 1rem;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.todo-delete:hover {
+    background-color: var(--color-delete);
+    color: var(--color-police);
+}
+
+.done {
+    background-color: var(--color-bg-btn);
+
+    .list-item-title {
+        opacity: 0.5;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .todo-dialog {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
