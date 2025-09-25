@@ -10,7 +10,7 @@ Deno.serve({ port: 4242, hostname: "localhost" }, async (req) => {
         return new Response(null, {
             status: 204,
             headers: {
-                "Access-Control-Allow-Origin": "http://localhost:5173",
+                "Access-Control-Allow-Origin": "http://127.0.0.1:5173",
                 "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
                 "Access-Control-Allow-Headers": "Content-Type"
             }
@@ -28,14 +28,14 @@ Deno.serve({ port: 4242, hostname: "localhost" }, async (req) => {
             return new Response(JSON.stringify({ error: "Not Found" + e }), { 
                 status: 404,
                 headers : {
-                    "Access-Control-Allow-Origin": "http://localhost:5173"
+                    "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
                 } 
             });
         } else {
             return new Response(JSON.stringify({ error: "Internal Server Error" + e }), {
                 status: 500,
                 headers : {
-                    "Access-Control-Allow-Origin": "http://localhost:5173"
+                    "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
                 }
             });
         }

@@ -7,7 +7,7 @@ export async function index(req: Request, url: URL): Promise<Response> {
         status: 200,
         headers: {
           "Content-Type":"application/json",
-          "Access-Control-Allow-Origin": "http://localhost:5173"
+          "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
         }
     });
 } 
@@ -19,7 +19,7 @@ export async function create(req: Request, url: URL): Promise<Response> {
     status: 201,
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "http://localhost:5173"
+      "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
     }
   })  
 }
@@ -30,7 +30,7 @@ export async function remove(req: Request, url: URL): Promise<Response> {
       return new Response(JSON.stringify({error: "False Id removeTodo"}), {
         status: 404,
         headers : {
-          "Access-Control-Allow-Origin": "http://localhost:5173"
+          "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
         }
       });
     }
@@ -39,14 +39,14 @@ export async function remove(req: Request, url: URL): Promise<Response> {
       return new Response(null, {
         status: 204,
         headers : {
-          "Access-Control-Allow-Origin": "http://localhost:5173"
+          "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
         }
       });
     } else {
       return new Response(JSON.stringify({error: "Todo not Found"}), {
         status: 404,
         headers : {
-          "Access-Control-Allow-Origin": "http://localhost:5173"
+          "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
         }
       });
     }
@@ -59,7 +59,7 @@ export async function update(req: Request, url: URL): Promise<Response> {
       return new Response(JSON.stringify({error: "False Id removeTodo"}), {
         status: 404,
         headers : {
-          "Access-Control-Allow-Origin": "http://localhost:5173"
+          "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
         }
       });
     }
@@ -69,7 +69,7 @@ export async function update(req: Request, url: URL): Promise<Response> {
         status: 200,
         headers: {
           "Content-Type":"application/json",
-          "Access-Control-Allow-Origin": "http://localhost:5173"
+          "Access-Control-Allow-Origin": "http://127.0.0.1:5173"
         }
   });
 }
